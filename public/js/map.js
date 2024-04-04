@@ -83,7 +83,7 @@ function removeOldMarkers() {
     });
 }
 
-async function updateMarkers() {
+export async function updateMarkers() {
     flagMarkersForRemoval();
 
     await plotAircraft();
