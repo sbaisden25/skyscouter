@@ -1,5 +1,5 @@
 export async function fetchAircraftData() {
-    const response = await fetch('https://skyscouter.onrender.com//aircraft');
+    const response = await fetch('https://skyscouter-backend.onrender.com/aircraft');
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -7,7 +7,7 @@ export async function fetchAircraftData() {
 }
 
 export async function fetchISSPosition() {
-    const response = await fetch('https://skyscouter.onrender.com//issPosition');
+    const response = await fetch('https://skyscouter-backend.onrender.com/issPosition');
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
     }
