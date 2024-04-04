@@ -123,11 +123,28 @@ body, html {
 }
 
 @media (max-width: 768px) {
+    .layout-container {
+        flex-direction: column; /* Stack map and checkboxes vertically */
+    }
+
     .checkboxes-container {
-        
-        position: relative;
-        top: -40px; 
-        margin-top: 0; 
-        padding-top: 10px; 
+        position: absolute; /* Keep it floating over the content */
+        top: 83%; /* Adjust this value as needed to place it higher */
+        left: 51%;
+        transform: translateX(-50%) translateY(0); /* Center it horizontally */
+        width: 60%; /* Adjust width to fit within mobile screens, you can tweak this */
+        z-index: 1001; /* Ensure it stays on top */
+        background-color: rgba(0, 0, 0, 0.8); /* Optional: make it slightly transparent */
+    }
+
+    .map-container {
+        width: 100%; /* Ensure the map takes full width */
+        flex-grow: 1;
+        position: relative; /* Adjust if needed */
+        height: auto; /* Adjust the height as needed, or consider using 'vh' units */
+    }
+
+    #map {
+        height: 80vh; /* Adjust based on available viewport height */
     }
 }
