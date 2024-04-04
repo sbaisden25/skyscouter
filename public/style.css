@@ -121,3 +121,13 @@ body, html {
     padding: 5px 10px;
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    .checkboxes-container {
+        
+        position: relative;
+        top: -40px; 
+        margin-top: 0; 
+        padding-top: 10px; 
+    }
+}

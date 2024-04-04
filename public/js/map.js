@@ -2,8 +2,8 @@ import { issIcon } from './icons.js';
 import { fetchAircraftData, fetchISSPosition} from './dataService.js';
 import { aircraftSchema, issSchema } from './schemas.js';
 import { map } from './mapInitialization.js';
-import { determineIcon } from './icons.js';
-import { civAircraftTypes, planeTypes, heliTypes, fighterTypes, uavTypes } from './icons.js';
+import { classifyAircraft } from './aircraftClassifier.js';
+import { doNotPlot, plottedAsPlaneIcon, plottedAsHelicopterIcon, plottedAsFighterJetIcon, plottedAsUAVIcon } from './icons.js';
 
 export const markers = {
     planes: [],
@@ -18,16 +18,17 @@ export async function plotAircraft() {
         const data = await fetchAircraftData();
         if (data.ac && Array.isArray(data.ac)) {
             data.ac.forEach(aircraft => {
-                if (aircraft.lat && aircraft.lon && !civAircraftTypes.includes(aircraft.t)) {
+                if (aircraft.lat && aircraft.lon && !doNotPlot.includes(aircraft.t)) {
                     const popupContent = createPopupContent(aircraft, aircraftSchema);
-                    const selectedIcon = determineIcon(aircraft);
-                    const marker = L.marker([aircraft.lat, aircraft.lon], { icon: selectedIcon }).bindPopup(popupContent).addTo(map);
+                    const classification = classifyAircraft(aircraft); // Use the function to classify each aircraft
 
-                    const category = getCategory(aircraft);
+                    if (!markers[classification.category]) markers[classification.category] = []; // Initialize category array if it doesn't exist
+                    
+                    // Create marker with the selected icon
+                    const marker = L.marker([aircraft.lat, aircraft.lon], { icon: classification.icon }).bindPopup(popupContent).addTo(map);
 
                     // Store marker by category
-                    if (!markers[category]) markers[category] = [];
-                    markers[category].push(marker);
+                    markers[classification.category].push(marker);
                 }
             });
         } else {
@@ -57,41 +58,11 @@ export async function plotISS() {
 
 function getCategory(aircraft) {
     if (!aircraft.t || aircraft.t === "N/A") return 'unidentified';
-    if (heliTypes.includes(aircraft.t)) return 'helicopters';
-    if (planeTypes.includes(aircraft.t)) return 'planes';
+    else if (plottedAsHelicopterIcon.includes(aircraft.t)) return 'helicopters';
+    else if (plottedAsPlaneIcon.includes(aircraft.t)) return 'planes';
 
     return 'fighters';
 }
-
-function flagMarkersForRemoval() {
-    Object.keys(markers).forEach(category => {
-        markers[category].forEach(marker => {
-            marker.flagForRemoval = true;
-        });
-    });
-}
-
-function removeOldMarkers() {
-    Object.keys(markers).forEach(category => {
-        markers[category] = markers[category].filter(marker => {
-            if (marker.flagForRemoval) {
-                map.removeLayer(marker);
-                return false;
-            }
-            return true;
-        });
-    });
-}
-
-export async function updateMarkers() {
-    flagMarkersForRemoval();
-
-    await plotAircraft();
-    await plotISS();
-
-    removeOldMarkers();
-}
-
 
 function createPopupContent(data, schema) {
     return schema
