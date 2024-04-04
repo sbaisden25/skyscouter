@@ -34,7 +34,7 @@ export const arcticBaseIcon = L.icon({
 
 export const planeTypes = ['C17', 'B737', 'C30J', 'DH8D', 'C27J', 'A321', 'C295', 'C130', 'C68A',
     'B738', 'B77W', 'E6', 'KT1', 'AN32', 'B38M', 'E121', 'D228', 'CT4', 'B762', 'B350', 'SNGY',
-    'SU95', 'A320', 'F2TH', 'P1', 'A400', 'E135', 'A332', 'TEX2', 'KC2', 'E50P', 'C501',
+    'SU95', 'A320', 'F2TH', 'P1', 'A400', 'E135', 'A332', 'TEX2', 'KC2', 'E50P', 'C501', 'AN2',
     'AN26', 'K35R', 'HRON', 'AT76', 'C210', 'P8', 'B703', 'C5M', 'DC10', 'GLF5', 'E390',
     'B734', 'G120', 'A148', 'A319', 'M28', 'C650', 'A124', 'CL60', 'L410', 'F900',
     'E120', 'EXPL', 'TUCA', 'E35L', 'RJ1H', 'CL2T', 'LJ45', 'GLF6', 'E145', 'W135', 'C172',

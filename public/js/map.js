@@ -46,7 +46,7 @@ export async function plotISS() {
             const issInfo = data.positions[0];
             const popupContent = createPopupContent(issInfo, issSchema);
 
-            L.marker([issInfo.satlatitude, issInfo.satlongitude], { icon: issIcon /* or an ISS-specific icon */ })
+            L.marker([issInfo.satlatitude, issInfo.satlongitude], { icon: issIcon })
                 .bindPopup(popupContent)
                 .addTo(map);
         }
@@ -63,6 +63,21 @@ function getCategory(aircraft) {
 
     return 'fighters';
 }
+
+export async function updateMarkers() {
+    
+    clearMarkers();
+    await plotAircraft();
+    await plotISS();
+}
+
+function clearMarkers() {
+    Object.keys(markers).forEach(category => {
+        markers[category].forEach(marker => map.removeLayer(marker));
+        markers[category] = []; // Clear the array after removing markers from the map
+    });
+}
+
 
 function createPopupContent(data, schema) {
     return schema
