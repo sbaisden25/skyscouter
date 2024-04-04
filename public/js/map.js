@@ -55,7 +55,6 @@ export async function plotISS() {
     }
 }
 
-
 function getCategory(aircraft) {
     if (!aircraft.t || aircraft.t === "N/A") return 'unidentified';
     if (heliTypes.includes(aircraft.t)) return 'helicopters';
@@ -64,18 +63,33 @@ function getCategory(aircraft) {
     return 'fighters';
 }
 
-export async function updateMarkers() {
-    
-    clearMarkers();
-    await plotAircraft();
-    await plotISS();
+function flagMarkersForRemoval() {
+    Object.keys(markers).forEach(category => {
+        markers[category].forEach(marker => {
+            marker.flagForRemoval = true;
+        });
+    });
 }
 
-function clearMarkers() {
+function removeOldMarkers() {
     Object.keys(markers).forEach(category => {
-        markers[category].forEach(marker => map.removeLayer(marker));
-        markers[category] = []; // Clear the array after removing markers from the map
+        markers[category] = markers[category].filter(marker => {
+            if (marker.flagForRemoval) {
+                map.removeLayer(marker);
+                return false;
+            }
+            return true;
+        });
     });
+}
+
+async function updateMarkers() {
+    flagMarkersForRemoval();
+
+    await plotAircraft();
+    await plotISS();
+
+    removeOldMarkers();
 }
 
 
