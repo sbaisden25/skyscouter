@@ -127,13 +127,8 @@ body, html {
 
     #github-star-btn {
         position: fixed;
-        bottom: 10px; /* Adjust as needed */
-        left: 10px; /* Adjust as needed */
     }
-}
 
-
-@media (max-width: 600px) {
     .checkbox-item {
         flex-direction: row-reverse; /* Puts the checkbox to the right of the label */
         justify-content: flex-end; /* Aligns the checkbox and label to the right */
