@@ -108,7 +108,7 @@ body, html {
     bottom: 0;
     left: 0;
     margin: 10px;
-    z-index: 1000;
+    z-index: 1001;
 }
 
 .github-button {
@@ -117,6 +117,19 @@ body, html {
     border-radius: 4px;
     padding: 5px 10px;
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+    .map-container {
+        height: 100vh; /* Or any other appropriate height */
+    }
+
+    #github-star-btn {
+        position: fixed;
+        bottom: 10px; /* Adjust as needed */
+        left: 10px; /* Adjust as needed */
+    }
 }
 
 
