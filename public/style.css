@@ -37,29 +37,26 @@ body, html {
 }
 
 .checkboxes-container {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translateX(-50%);
+    position: fixed; /* Makes the container fixed at a spot */
+    bottom: 20px; /* Adjust as needed */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%); /* Adjusts for true centering */
+    width: auto; /* Adjust based on content, or set a specific width */
+    padding: 10px;
+    background-color: #f8f8f8; /* Light background for visibility */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
     z-index: 1001;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 8px 12px;
-    background-color: rgba(0, 0, 0, 0.9);
-    border-radius: 6px;
-    color: #fff; 
-    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    border: 1px solid #ddd; /* Subtle border */
 }
 
 .checkbox-group {
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
+    white-space: nowrap; /* Prevents the label from wrapping */
+    margin-bottom: 5px; /* Spacing between checkbox items */
 }
 
-.checkbox-group:last-child {
-    margin-right: 0;
+.checkbox-group label {
+    margin-left: 5px; /* Spacing between checkbox and label */
 }
 
 #liveStatus {
@@ -120,4 +117,17 @@ body, html {
     border-radius: 4px;
     padding: 5px 10px;
     text-decoration: none;
+}
+
+
+@media (max-width: 600px) {
+    .checkbox-item {
+        flex-direction: row-reverse; /* Puts the checkbox to the right of the label */
+        justify-content: flex-end; /* Aligns the checkbox and label to the right */
+    }
+
+    .checkbox-item label {
+        margin-right: 0; /* Removes the right margin from the label */
+        margin-left: 10px; /* Adds space between label and checkbox */
+    }
 }
