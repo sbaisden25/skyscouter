@@ -19,6 +19,7 @@ body, html {
 #map {
     flex-grow: 1;
     height: 100vh;
+    background-color: #262626;
 }
 
 #resetZoomBtn {
@@ -54,6 +55,7 @@ body, html {
 .checkbox-group {
     display: flex;
     align-items: center;
+    margin-right: 15px;
 }
 
 .checkbox-group:last-child {

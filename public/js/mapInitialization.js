@@ -3,15 +3,19 @@ import { setInitialCheckboxStates, toggleMarkers } from './markerManagement.js';
 import { initializeUIHandlers } from './uiHandlers.js';
 
 export const map = L.map('map', {
-    center: [50, 30],
-    zoom: 2,
-    maxBounds: [[-90, -230], [90, 230]],
-    minZoom: 2,
-    maxBoundsViscosity: 0.6,
+    center: [38, 12],    //EU
+    //center: [39, -98], //USA
+    zoom: 3,
+    maxBounds: [[-90, -250], [90, 250]],
+    minZoom: 3,
+    maxBoundsViscosity: 0.7,
 });
 
 export function initializeMap() {
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { attribution: '' }).addTo(map);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { 
+        attribution: '',
+        noWrap: true,
+    }).addTo(map);
 
     setInitialCheckboxStates();
     initializeUIHandlers();
@@ -33,6 +37,16 @@ function setupResetZoomButton() {
     });
 
     resetZoomBtn.addEventListener('click', () => {
-        map.setView([12, 9], 2);
+        map.setView([30, 50], 3);
     });
 }
+
+let terminator = L.terminator();
+document.getElementById('terminatorToggle').checked = false;
+document.getElementById('terminatorToggle').addEventListener('change', function(event) {
+    if (event.target.checked) {
+        terminator.addTo(map);
+    } else {
+        map.removeLayer(terminator);
+    }
+});

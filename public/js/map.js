@@ -56,14 +56,6 @@ export async function plotISS() {
     }
 }
 
-function getCategory(aircraft) {
-    if (!aircraft.t || aircraft.t === "N/A") return 'unidentified';
-    else if (plottedAsHelicopterIcon.includes(aircraft.t)) return 'helicopters';
-    else if (plottedAsPlaneIcon.includes(aircraft.t)) return 'planes';
-
-    return 'fighters';
-}
-
 function createPopupContent(data, schema) {
     return schema
         .map(({ label, valueKey, formatter }) => {

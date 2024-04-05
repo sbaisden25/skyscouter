@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkyScouter</title>
+    <link rel="icon" type="image/png" href="/icons/uav.png">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="/style.css" />
 </head>
@@ -33,6 +34,12 @@
             <input type="checkbox" id="unidentifiedCheckbox">
             <label for="unidentifiedCheckbox">Unidentified Aircraft</label>
         </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="terminatorToggle">
+            <label for="terminatorToggle">Illumination Boundary</label>
+        </div>
+
     </div>
 
     <!-- Map Container -->
@@ -56,6 +63,7 @@
 </div>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/@joergdietrich/leaflet.terminator"></script>
 <script type="module" src="js/main.js"></script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
