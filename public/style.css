@@ -124,12 +124,10 @@ body, html {
     
     .checkboxes-container {
         position: absolute;
-        transform: translateX(-50%) translateY(0); 
+        transform: translateX(-50%) translateY(-50%);
         z-index: 1001;
         background-color: rgba(0, 0, 0, 0.8);
-        max-width: 45%;
-        top: 88%;
-        left: 51%;
+        max-width: 65%;
     }
 
     .map-container {
