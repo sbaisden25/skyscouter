@@ -132,8 +132,6 @@ body, html {
         bottom: 10px; 
         right: 10px;
         transform: translateX(-50%) translateY(0); 
-        width: auto;
-        height: auto;
         z-index: 1001;
         background-color: rgba(0, 0, 0, 0.8);
     }
