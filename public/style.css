@@ -129,7 +129,7 @@ body, html {
 
     .checkboxes-container {
         position: absolute; /* Keep it floating over the content */
-        top: 83%; /* Adjust this value as needed to place it higher */
+        top: 88%; /* Adjust this value as needed to place it higher */
         left: 51%;
         transform: translateX(-50%) translateY(0); /* Center it horizontally */
         width: 60%; /* Adjust width to fit within mobile screens, you can tweak this */
@@ -147,4 +147,10 @@ body, html {
     #map {
         height: 80vh; /* Adjust based on available viewport height */
     }
+
+    .checkbox-group {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    
 }
