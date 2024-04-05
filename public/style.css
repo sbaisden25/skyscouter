@@ -128,39 +128,40 @@ body, html {
     }
 
     .checkboxes-container {
-        position: absolute; /* Keep it floating over the content */
-        top: 95%; 
-        left: 95%;
-        transform: translateX(-50%) translateY(0); /* Center it horizontally */
-        width: 30%; /* Adjust width to fit within mobile screens, you can tweak this */
-        z-index: 1001; /* Ensure it stays on top */
-        background-color: rgba(0, 0, 0, 0.8); /* Optional: make it slightly transparent */
+        position: absolute;
+        bottom: 10px; 
+        right: 10px;
+        transform: translateX(-50%) translateY(0); 
+        width: auto;
+        height: auto;
+        z-index: 1001;
+        background-color: rgba(0, 0, 0, 0.8);
     }
 
     .map-container {
-        width: 100%; /* Ensure the map takes full width */
+        width: 100%; 
         flex-grow: 1;
-        position: relative; /* Adjust if needed */
-        height: auto; /* Adjust the height as needed, or consider using 'vh' units */
+        position: relative; 
+        height: auto; 
     }
 
     #map {
-        height: 80vh; /* Adjust based on available viewport height */
+        height: 80vh; 
     }
 
     .checkbox-group {
         flex-direction: row-reverse;
         justify-content: flex-end;
-        width: 100%; /* Ensures the group spans the full width */
+        width: 100%; 
     }
 
     .checkbox-group label {
-        text-align: left; /* Ensures text is aligned to the left */
-        flex-grow: 1; /* Allows the label to occupy the available space */
+        text-align: left; 
+        flex-grow: 1; 
     }
 
     .checkbox-group input[type="checkbox"] {
-        margin-left: auto; /* Pushes the checkbox to the right */
+        margin-left: auto; 
     }
 
     .github-button {
@@ -169,7 +170,15 @@ body, html {
         border-radius: 4px;
         padding: 5px 10px;
         text-decoration: none;
-        margin-bottom: 20px;
+        bottom: 50px;
+    }
+
+    #github-star-btn {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        margin: 10px;
+        z-index: 1000;
     }
     
 }
