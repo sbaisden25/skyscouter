@@ -124,15 +124,15 @@ body, html {
 
 @media (max-width: 768px) {
     .layout-container {
-        flex-direction: column; /* Stack map and checkboxes vertically */
+        flex-direction: column;
     }
 
     .checkboxes-container {
         position: absolute; /* Keep it floating over the content */
-        top: 88%; /* Adjust this value as needed to place it higher */
-        left: 51%;
+        top: 95%; 
+        left: 95%;
         transform: translateX(-50%) translateY(0); /* Center it horizontally */
-        width: 60%; /* Adjust width to fit within mobile screens, you can tweak this */
+        width: 30%; /* Adjust width to fit within mobile screens, you can tweak this */
         z-index: 1001; /* Ensure it stays on top */
         background-color: rgba(0, 0, 0, 0.8); /* Optional: make it slightly transparent */
     }
@@ -161,6 +161,15 @@ body, html {
 
     .checkbox-group input[type="checkbox"] {
         margin-left: auto; /* Pushes the checkbox to the right */
+    }
+
+    .github-button {
+        background-color: rgba(0,0,0,0.5); 
+        color: #fff;
+        border-radius: 4px;
+        padding: 5px 10px;
+        text-decoration: none;
+        margin-bottom: 20px;
     }
     
 }
