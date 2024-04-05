@@ -129,12 +129,12 @@ body, html {
         position: fixed;
     }
 
-    .checkbox-item {
+    .checkbox-group {
         flex-direction: row-reverse; /* Puts the checkbox to the right of the label */
         justify-content: flex-end; /* Aligns the checkbox and label to the right */
     }
 
-    .checkbox-item label {
+    .checkbox-group label {
         margin-right: 0; /* Removes the right margin from the label */
         margin-left: 10px; /* Adds space between label and checkbox */
     }
