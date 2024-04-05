@@ -47,7 +47,7 @@ export const plottedAsFighterJetIcon = ['FA50', 'T38', 'HAWK', 'E314', 'EUFI', '
 
 export const doNotPlot = ['PC5T', 'GLID', 'AT8T', 'PC6T', 'PC12', 'TBM7', 'F260', 'PC7', 'PC21', 'BE20',
     'C560', 'PC9', 'SIRA', 'ULAC', 'Z42', 'G115', 'TBM9', 'TEX2', 'T34T', 'AT3T', 'R44', 'ASTR', 'B722', 'SR20',
-    'TWS', 'C182', 'PA46', 'ECHO', 'SERV']
+    'TWS', 'C182', 'PA46', 'ECHO', 'SERV', 'C150']
 
 
 

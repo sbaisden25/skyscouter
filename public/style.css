@@ -151,6 +151,16 @@ body, html {
     .checkbox-group {
         flex-direction: row-reverse;
         justify-content: flex-end;
+        width: 100%; /* Ensures the group spans the full width */
+    }
+
+    .checkbox-group label {
+        text-align: left; /* Ensures text is aligned to the left */
+        flex-grow: 1; /* Allows the label to occupy the available space */
+    }
+
+    .checkbox-group input[type="checkbox"] {
+        margin-left: auto; /* Pushes the checkbox to the right */
     }
     
 }
