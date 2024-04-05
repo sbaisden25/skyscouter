@@ -54,8 +54,6 @@ body, html {
 .checkbox-group {
     display: flex;
     align-items: center;
-    gap: 2px;
-    margin-right: 15px;
 }
 
 .checkbox-group:last-child {
@@ -123,17 +121,14 @@ body, html {
 }
 
 @media (max-width: 768px) {
-    .layout-container {
-        flex-direction: column;
-    }
-
+    
     .checkboxes-container {
         position: absolute;
-        bottom: 10px; 
-        right: 10px;
         transform: translateX(-50%) translateY(0); 
         z-index: 1001;
         background-color: rgba(0, 0, 0, 0.8);
+        max-width: 40%;
+        top: 84%;
     }
 
     .map-container {
@@ -149,7 +144,6 @@ body, html {
 
     .checkbox-group {
         flex-direction: row-reverse;
-        justify-content: flex-end;
         width: 100%; 
     }
 
@@ -158,25 +152,4 @@ body, html {
         flex-grow: 1; 
     }
 
-    .checkbox-group input[type="checkbox"] {
-        margin-left: auto; 
-    }
-
-    .github-button {
-        background-color: rgba(0,0,0,0.5); 
-        color: #fff;
-        border-radius: 4px;
-        padding: 5px 10px;
-        text-decoration: none;
-        bottom: 50px;
-    }
-
-    #github-star-btn {
-        position: absolute;
-        bottom: 10px;
-        left: 0;
-        margin: 10px;
-        z-index: 1000;
-    }
-    
 }
