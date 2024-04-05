@@ -24,7 +24,7 @@ body, html {
 
 #resetZoomBtn {
     position: absolute;
-    top: 80%;
+    top: 77%;
     left: 49%;
     transform: translateX(-50%);
     z-index: 1000;
@@ -37,26 +37,26 @@ body, html {
 }
 
 .checkboxes-container {
-    position: fixed; /* Makes the container fixed at a spot */
-    bottom: 20px; /* Adjust as needed */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%); /* Adjusts for true centering */
-    width: auto; /* Adjust based on content, or set a specific width */
+    position: fixed;
+    bottom: 20px;
+    left: 49%;
+    transform: translate(-50%);
+    width: auto;
     padding: 10px;
-    background-color: #f8f8f8; /* Light background for visibility */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     z-index: 1001;
-    border: 1px solid #ddd; /* Subtle border */
+    border: 1px solid #ddd;
 }
 
 .checkbox-group {
-    white-space: nowrap; /* Prevents the label from wrapping */
-    margin-bottom: 5px; /* Spacing between checkbox items */
+    white-space: nowrap;
+    margin-bottom: 5px;
 }
 
 .checkbox-group label {
-    margin-left: 5px; /* Spacing between checkbox and label */
+    margin-left: 5px;
 }
 
 #liveStatus {
@@ -122,7 +122,7 @@ body, html {
 @media (max-width: 768px) {
 
     .map-container {
-        height: 100vh; /* Or any other appropriate height */
+        height: 100vh;
     }
 
     #github-star-btn {
@@ -130,12 +130,12 @@ body, html {
     }
 
     .checkbox-group {
-        flex-direction: row-reverse; /* Puts the checkbox to the right of the label */
-        justify-content: flex-end; /* Aligns the checkbox and label to the right */
+        flex-direction: row-reverse;
+        justify-content: flex-end;
     }
 
     .checkbox-group label {
-        margin-right: 0; /* Removes the right margin from the label */
-        margin-left: 10px; /* Adds space between label and checkbox */
+        margin-right: 0;
+        margin-left: 10px;
     }
 }
