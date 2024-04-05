@@ -121,34 +121,44 @@ body, html {
 }
 
 @media (max-width: 768px) {
-    
     .checkboxes-container {
-        position: absolute;
-        transform: translateX(-50%) translateY(-80%);
+        position: fixed; /* Changed to 'fixed' to keep it at the bottom regardless of scrolling */
+        bottom: 0; /* Aligns container to the bottom of the screen */
+        left: 50%; /* Centers the container horizontally */
+        transform: translateX(-50%); /* Adjusts for centering */
         z-index: 1001;
         background-color: rgba(0, 0, 0, 0.8);
-        max-width: 75%;
+        width: 100%; /* Makes the container use full width */
+        max-width: 95%; /* Ensures some margin from the viewport edges */
+        min-width: 300px; /* Prevents the container from becoming too narrow */
+        box-sizing: border-box; /* Ensures padding doesn't add to the width */
+        padding: 10px; /* Adds some padding inside the container */
     }
 
     .map-container {
-        width: 100%; 
+        width: 100%;
         flex-grow: 1;
-        position: relative; 
-        height: auto; 
+        position: relative;
+        height: auto;
     }
 
     #map {
-        height: 80vh; 
+        height: 80vh;
     }
 
     .checkbox-group {
         flex-direction: row-reverse;
-        width: 100%; 
+        justify-content: space-between; /* Ensures labels and checkboxes are spaced out */
+        width: auto; /* Adjusts based on content width */
+        box-sizing: border-box; /* Ensures padding doesn't add to the width */
     }
 
     .checkbox-group label {
-        text-align: left; 
-        flex-grow: 1; 
+        text-align: left;
+        flex-grow: 1; /* Allows the label to expand and prevent wrapping */
     }
 
+    .checkbox-group input[type="checkbox"] {
+        margin-left: auto; /* Keeps the checkbox to the right */
+    }
 }
