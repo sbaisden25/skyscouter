@@ -39,22 +39,6 @@ export async function plotAircraft() {
     }
 }
 
-export async function plotISS() {
-    try {
-        const data = await fetchISSPosition();
-        
-        if(data && data.positions.length > 0) {
-            const issInfo = data.positions[0];
-            const popupContent = createPopupContent(issInfo, issSchema);
-
-            L.marker([issInfo.satlatitude, issInfo.satlongitude], { icon: issIcon })
-                .bindPopup(popupContent)
-                .addTo(map);
-        }
-    } catch (error) {
-        console.error("Failed to fetch ISS position:", error);
-    }
-}
 
 function createPopupContent(data, schema) {
     return schema

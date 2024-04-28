@@ -33,20 +33,6 @@ app.get('/aircraft', async (req, res) => {
   }
 });
 
-// ISS Position Route
-app.get('/issPosition', async (req, res) => {
-  const apiKey = process.env.N2YO_API_KEY;
-  const url = `https://api.n2yo.com/rest/v1/satellite/positions/25544/41.702/-76.014/0/2/&apiKey=${apiKey}`;
-
-  try {
-    const { data } = await axios.get(url);
-    res.json(data);
-  } catch (error) {
-    console.error('Error fetching ISS position:', error.message);
-    res.status(500).send('Failed to fetch ISS position data');
-  }
-});
-
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });

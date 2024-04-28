@@ -5,11 +5,3 @@ export async function fetchAircraftData() {
     }
     return response.json();
 }
-
-export async function fetchISSPosition() {
-    const response = await fetch('https://skyscouter-backend.onrender.com/issPosition');
-    if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return response.json();
-}
