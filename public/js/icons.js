@@ -1,13 +1,6 @@
-export function determineAircraftIcon(aircraft) {
-    if (!aircraft.t || aircraft.t === "N/A") { return unidentifiedAircraftIcon; }
-    else if (plottedAsHelicopterIcon.includes(aircraft.t)) { return helicopterIcon; } 
-    else if (plottedAsPlaneIcon.includes(aircraft.t)) { return planeIcon; } 
-    else if (plottedAsUAVIcon.includes(aircraft.t)) { return uavIcon; }
-    return fighterIcon;
-}
 
 export const fighterIcon = L.icon({
-    iconUrl: '/icons/jet.png', iconSize: [42, 42], iconAnchor: [21, 21], popupAnchor: [0, -21]
+    iconUrl: '/icons/jet.png', iconSize: [44, 44], iconAnchor: [22, 22], popupAnchor: [0, -21]
 });
 export const unidentifiedAircraftIcon = L.icon({
     iconUrl: '/icons/jetq.png',iconSize: [32, 32],iconAnchor: [16, 16],popupAnchor: [0, -16]
