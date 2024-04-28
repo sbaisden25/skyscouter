@@ -17,15 +17,3 @@ export const aircraftSchema = [
         }
     }
 ];
-
-export const issSchema = [
-    { label: "Header", formatter: () => "<strong>International Space Station</strong><br>" },
-    { label: "Latitude", valueKey: "satlatitude", formatter: (val) => val.toFixed(2) },
-    { label: "Longitude", valueKey: "satlongitude", formatter: (val) => val.toFixed(2) },
-    { label: "Altitude", valueKey: "sataltitude", formatter: (val) => `${(val * 0.621371).toFixed(2)} miles` },
-    { label: "Azimuth", valueKey: "azimuth", formatter: (val) => `${val.toFixed(2)}°` },
-    { label: "Elevation", valueKey: "elevation", formatter: (val) => `${val.toFixed(2)}°` },
-    { label: "Right Ascension", valueKey: "ra", formatter: (val) => `${val.toFixed(2)}` },
-    { label: "Declination", valueKey: "dec", formatter: (val) => `${val.toFixed(2)}` },
-    { label: "Timestamp", valueKey: "timestamp", formatter: (val) => new Date(val * 1000).toLocaleString() },
-];

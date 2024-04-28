@@ -1,6 +1,5 @@
-import { issIcon } from './icons.js';
-import { fetchAircraftData, fetchISSPosition} from './dataService.js';
-import { aircraftSchema, issSchema } from './schemas.js';
+import { fetchAircraftData} from './dataService.js';
+import { aircraftSchema } from './schemas.js';
 import { map } from './mapInitialization.js';
 import { classifyAircraft } from './aircraftClassifier.js';
 import { doNotPlot, plottedAsPlaneIcon, plottedAsHelicopterIcon, plottedAsFighterJetIcon, plottedAsUAVIcon } from './icons.js';

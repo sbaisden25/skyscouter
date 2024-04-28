@@ -1,4 +1,4 @@
-import { plotISS, plotAircraft } from './map.js';
+import { plotAircraft } from './map.js';
 import { setInitialCheckboxStates, toggleMarkers } from './markerManagement.js';
 import { initializeUIHandlers } from './uiHandlers.js';
 
@@ -21,7 +21,6 @@ export function initializeMap() {
     initializeUIHandlers();
     setupResetZoomButton();
 
-    plotISS();
     plotAircraft().then(() => {
         toggleMarkers('helicopters', document.getElementById('heliCheckbox').checked);
         toggleMarkers('planes', document.getElementById('planeCheckbox').checked);
