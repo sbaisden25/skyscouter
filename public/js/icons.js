@@ -12,7 +12,7 @@ export const helicopterIcon = L.icon({
     iconUrl: '/icons/apache.png', iconSize: [36, 36], iconAnchor: [18, 18], popupAnchor: [0, -6]
 });
 export const uavIcon = L.icon({
-    iconUrl: '/icons/uav.png',iconSize: [32, 32],iconAnchor: [16, 16],popupAnchor: [0, -16]
+    iconUrl: '/icons/uav.png',iconSize: [34, 34],iconAnchor: [17, 17],popupAnchor: [0, -17]
 });
 
 export const plottedAsPlaneIcon = ['C17', 'B737', 'C30J', 'DH8D', 'C27J', 'A321', 'C295', 'C130', 'C68A',
@@ -27,7 +27,7 @@ export const plottedAsPlaneIcon = ['C17', 'B737', 'C30J', 'DH8D', 'C27J', 'A321'
     'E2', 'E550', 'DH8C', 'BE40', 'B742', 'E190', 'FA20', 'G280', 'C2', 'A310', 'DHC6', 'AT72', 'C56X', 
     'T206', 'DH8B', 'C680', 'B744', 'RV8', 'A345', 'IL76', 'ATLA', 'AT43', 'C441', 'BE55', 'BE30', 'S22T',
     'A748', 'A149', 'LJ60', 'CRJ7', 'SR22', 'B733', 'B788', 'B52', 'FA8X', 'AT44', 'DHC2', 'E314', 'T204',
-    'B52', 'C510', 'C25A', 'E545', 'PZ4M'];
+    'B52', 'C510', 'C25A', 'E545', 'PZ4M', 'C55B'];
 
 export const plottedAsHelicopterIcon = ['H64', 'H60', 'EC45', 'EC35', 'H53S', 'B407', 'B212', 'S92',
     'EH10', 'B412', 'A169', 'B505', 'A109', 'B429', 'A139', 'NH90', 'SURN', 'W3', 'AS50', 'AS65', 'B06', 
