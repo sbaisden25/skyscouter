@@ -11,7 +11,6 @@ export const aircraftSchema = [
         label: "Last seen",
         valueKey: "seen",
         formatter: (val) => {
-            // Convert 'seen' seconds ago to a Date object and format
             const lastSeenDate = new Date(new Date().getTime() - (val * 1000));
             return lastSeenDate.toLocaleString();
         }

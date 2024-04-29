@@ -1,15 +1,15 @@
 
 export const fighterIcon = L.icon({
-    iconUrl: '/icons/jet.png', iconSize: [44, 44], iconAnchor: [22, 22], popupAnchor: [0, -21]
+    iconUrl: '/icons/jet.png', iconSize: [44, 44], iconAnchor: [22, 22], popupAnchor: [0, -22]
 });
 export const unidentifiedAircraftIcon = L.icon({
     iconUrl: '/icons/jetq.png',iconSize: [32, 32],iconAnchor: [16, 16],popupAnchor: [0, -16]
 });
 export const planeIcon = L.icon({
-    iconUrl: '/icons/plane.png', iconSize: [28, 28], iconAnchor: [14, 14], popupAnchor: [0, -14]
+    iconUrl: '/icons/plane.png', iconSize: [26, 26], iconAnchor: [13, 13], popupAnchor: [0, -13]
 });
 export const helicopterIcon = L.icon({
-    iconUrl: '/icons/apache.png', iconSize: [38, 38], iconAnchor: [19, 19], popupAnchor: [0, -6]
+    iconUrl: '/icons/apache.png', iconSize: [36, 36], iconAnchor: [18, 18], popupAnchor: [0, -6]
 });
 export const uavIcon = L.icon({
     iconUrl: '/icons/uav.png',iconSize: [32, 32],iconAnchor: [16, 16],popupAnchor: [0, -16]
@@ -27,7 +27,7 @@ export const plottedAsPlaneIcon = ['C17', 'B737', 'C30J', 'DH8D', 'C27J', 'A321'
     'E2', 'E550', 'DH8C', 'BE40', 'B742', 'E190', 'FA20', 'G280', 'C2', 'A310', 'DHC6', 'AT72', 'C56X', 
     'T206', 'DH8B', 'C680', 'B744', 'RV8', 'A345', 'IL76', 'ATLA', 'AT43', 'C441', 'BE55', 'BE30', 'S22T',
     'A748', 'A149', 'LJ60', 'CRJ7', 'SR22', 'B733', 'B788', 'B52', 'FA8X', 'AT44', 'DHC2', 'E314', 'T204',
-    'B52', 'C510', 'C25A'];
+    'B52', 'C510', 'C25A', 'E545', 'PZ4M'];
 
 export const plottedAsHelicopterIcon = ['H64', 'H60', 'EC45', 'EC35', 'H53S', 'B407', 'B212', 'S92',
     'EH10', 'B412', 'A169', 'B505', 'A109', 'B429', 'A139', 'NH90', 'SURN', 'W3', 'AS50', 'AS65', 'B06', 
@@ -39,7 +39,8 @@ export const plottedAsBomberIcon = ['B52', 'B1'];
 export const plottedAsUAVIcon = ['Q4', 'DRON', 'U2'];
 
 export const plottedAsFighterJetIcon = ['FA50', 'T38', 'HAWK', 'E314', 'EUFI', 'F16', 'M346', 'F100',
-    'M339', 'HAR', 'MIR2', 'F15', 'F5', 'F22', 'VF35', 'F4', 'A10', 'MG29', 'F111', 'F14'];
+    'M339', 'HAR', 'MIR2', 'F15', 'F5', 'F22', 'VF35', 'F4', 'A10', 'MG29', 'F111', 'F14', 'SB39',
+    'CL41'];
 
 export const doNotPlot = ['PC5T', 'GLID', 'AT8T', 'PC6T', 'PC12', 'TBM7', 'F260', 'PC7', 'PC21', 'BE20',
     'C560', 'PC9', 'SIRA', 'ULAC', 'Z42', 'G115', 'TBM9', 'T34T', 'AT3T', 'R44', 'ASTR', 'B722', 

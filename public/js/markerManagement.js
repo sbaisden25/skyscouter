@@ -1,6 +1,5 @@
-// Import necessary instances or objects, if required
-import { map } from './mapInitialization.js'; // Adjust the path as necessary
-import { markers } from './map.js'; // This is hypothetical; adjust based on your actual file structure
+import { map } from './mapInitialization.js';
+import { markers } from './map.js';
 
 export function setInitialCheckboxStates() {
     document.getElementById('heliCheckbox').checked = true;
