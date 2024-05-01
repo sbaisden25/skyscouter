@@ -24,7 +24,7 @@ body, html {
 
 #resetZoomBtn {
     position: absolute;
-    top: 74%;
+    top: 78%;
     left: 49%;
     transform: translateX(-50%);
     z-index: 1000;
@@ -38,7 +38,7 @@ body, html {
 
 .checkboxes-container {
     position: fixed;
-    bottom: 0px;
+    bottom: 15px;
     left: 49%;
     transform: translate(-50%);
     width: auto;
@@ -64,7 +64,7 @@ body, html {
     font-size: 13px;
     font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
-    color: #111;
+    color: #1b1a1a;
     margin-left: 5px;
 
 }
@@ -98,28 +98,29 @@ body, html {
 
 #liveStatus {
     position: absolute;
-    top: 17px;
-    right: 17px;
+    top: 10px;
+    right: 10px;
     z-index: 1000;
     display: flex;
     align-items: center;
-    background-color: #121212;
-    color: #fff;
-    padding: 6px 10px;
-    border-radius: 15px;
-    font-size: 13px;
+    background-color: #fff;
+    color: #302a2a;
+    padding: 4px 4px;
+    border-radius: 10px;
+    font-size: 12px;
     font-weight: bold;
     font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 1px 1px rgba(231, 225, 225, 0.3);
 }
 
 /* Styled red dot with pulsating animation */
 #liveStatus span {
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
     background-color: #FF3B3B;
     border-radius: 50%;
-    margin-right: 6px;
-    box-shadow: 0 0 5px rgba(255, 59, 59, 0.9);
+    margin-right: 4px;
+    box-shadow: 0 0 7px rgba(255, 59, 59, 0.9);
     animation: pulse 2s infinite;
 }
 
@@ -158,27 +159,27 @@ body, html {
 
 @media (max-width: 768px) {
     .layout-container {
-        flex-direction: column; /* Adjust layout for smaller screens */
+        flex-direction: column;
     }
 
     .map-container {
-        flex-grow: 1; /* Ensure map takes available space */
+        flex-grow: 1;
     }
 
     #map {
-        height: calc(100vh - 60px); /* Adjust height to account for the checkbox container */
+        height: calc(100vh - 60px); 
     }
 
     #github-star-btn {
         position: fixed;
-        bottom: 0px; /* Ensure it doesn't overlap with the checkbox container */
-        left: 0px; /* Keep consistent left margin */
+        bottom: 0px; 
+        left: 0px; 
         z-index: 1001;
     }
     
     .counter {
-        width: auto; /* Adjust width to fit content */
-        padding-left: 3px; /* Reduce padding to decrease width */
+        width: auto;
+        padding-left: 1px;
         font-size: 11px;
     }
 }
