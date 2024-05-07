@@ -69,7 +69,6 @@ body, html {
 
 }
 
-
 .counter {
     display: inline-block;
     min-width: 30px;
@@ -82,7 +81,6 @@ body, html {
     font-size: 13px;
 }
 
-
 .checkbox-group input[type="checkbox"] {
     width: 16px; 
     height: 16px;  
@@ -93,9 +91,6 @@ body, html {
     border-bottom: none;  
 }
 
-
-
-
 #liveStatus {
     position: absolute;
     top: 10px;
@@ -104,7 +99,7 @@ body, html {
     display: flex;
     align-items: center;
     background-color: #fff;
-    color: #302a2a;
+    color: #252424;
     padding: 4px 4px;
     border-radius: 10px;
     font-size: 12px;
