@@ -7,7 +7,7 @@ import {
     plottedAsHelicopterIcon,
     plottedAsPlaneIcon,
     plottedAsUAVIcon
-} from './icons.js';
+} from '../aircraft/icons.js';
 
 export function classifyAircraft(aircraft) {
     let icon, category;

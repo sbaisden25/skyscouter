@@ -1,4 +1,4 @@
-import { knotsToMph, headingToCompassDirection } from './utils.js';
+import { knotsToMph, headingToCompassDirection } from '../utilities/utils.js';
 
 export const aircraftSchema = [
     { label: "Flight", valueKey: "flight", formatter: (val) => val.trim() },

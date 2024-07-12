@@ -1,6 +1,6 @@
 import { plotAircraft } from './map.js';
 import { setInitialCheckboxStates, toggleMarkers } from './markerManagement.js';
-import { initializeUIHandlers } from './uiHandlers.js';
+import { initializeUIHandlers } from '../ui/uiHandlers.js';
 
 export const map = L.map('map', {
     center: [38, 12],    //EU

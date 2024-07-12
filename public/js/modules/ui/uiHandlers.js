@@ -1,4 +1,4 @@
-import { toggleMarkers } from './markerManagement.js';
+import { toggleMarkers } from '../map/markerManagement.js';
 
 export function initializeUIHandlers() {
     

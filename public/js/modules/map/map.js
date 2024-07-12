@@ -1,8 +1,8 @@
-import { fetchAircraftData} from './dataService.js';
-import { aircraftSchema } from './schemas.js';
+import { fetchAircraftData } from '../data/dataService.js';
+import { aircraftSchema } from '../data/schemas.js';
 import { map } from './mapInitialization.js';
-import { classifyAircraft } from './aircraftClassifier.js';
-import { doNotPlot, plottedAsPlaneIcon, plottedAsHelicopterIcon, plottedAsFighterJetIcon, plottedAsUAVIcon } from './icons.js';
+import { classifyAircraft } from '../aircraft/aircraftClassifier.js';
+import { doNotPlot } from '../aircraft/icons.js';
 
 export const markers = {
     planes: [],
