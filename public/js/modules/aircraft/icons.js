@@ -27,7 +27,7 @@ export const plottedAsPlaneIcon = ['C17', 'B737', 'C30J', 'DH8D', 'C27J', 'A321'
     'E2', 'E550', 'DH8C', 'BE40', 'B742', 'E190', 'FA20', 'G280', 'C2', 'A310', 'DHC6', 'AT72', 'C56X', 
     'T206', 'DH8B', 'C680', 'B744', 'RV8', 'A345', 'IL76', 'ATLA', 'AT43', 'C441', 'BE55', 'BE30', 'S22T',
     'A748', 'A149', 'LJ60', 'CRJ7', 'SR22', 'B733', 'B788', 'B52', 'FA8X', 'AT44', 'DHC2', 'E314', 'T204',
-    'B52', 'C510', 'C25A', 'E545', 'PZ4M', 'C55B', 'C525', 'B739'];
+    'B52', 'C510', 'C25A', 'E545', 'PZ4M', 'C55B', 'C525', 'B739', 'DC93'];
 
 export const plottedAsHelicopterIcon = ['H64', 'H60', 'EC45', 'EC35', 'H53S', 'B407', 'B212', 'S92',
     'EH10', 'B412', 'A169', 'B505', 'A109', 'B429', 'A139', 'NH90', 'SURN', 'W3', 'AS50', 'AS65', 'B06', 
@@ -44,7 +44,8 @@ export const plottedAsFighterJetIcon = ['FA50', 'T38', 'HAWK', 'E314', 'EUFI', '
 
 export const doNotPlot = ['PC5T', 'GLID', 'AT8T', 'PC6T', 'PC12', 'TBM7', 'F260', 'PC7', 'PC21', 'BE20',
     'C560', 'PC9', 'SIRA', 'ULAC', 'Z42', 'G115', 'TBM9', 'T34T', 'AT3T', 'R44', 'ASTR', 'B722', 
-    'SR20', 'TWR', 'C182', 'PA46', 'ECHO', 'SERV', 'C150', 'C206', 'RV7', 'PZ3T', 'DHC3', 'CC19']
+    'SR20', 'TWR', 'C182', 'PA46', 'ECHO', 'SERV', 'C150', 'C206', 'RV7', 'PZ3T', 'DHC3', 'CC19',
+    'E55P', 'DG1T', 'C82R', 'P28A']
 
 
 
