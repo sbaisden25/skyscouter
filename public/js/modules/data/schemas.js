@@ -2,7 +2,7 @@ import { knotsToMph, headingToCompassDirection } from '../utilities/utils.js';
 
 export const aircraftSchema = [
     { label: "Flight", valueKey: "flight", formatter: (val) => val.trim() },
-    { label: "Type", valueKey: "t", formatter: (val) => val || "N/A" },
+    { label: "Aircraft Type", valueKey: "t", formatter: (val) => val || "N/A" },
     { label: "Altitude", valueKey: "alt_baro", formatter: (val) => `${val} feet` },
     { label: "Speed", valueKey: "gs", formatter: (val) => `${knotsToMph(val).toFixed(2)} mph` },
     { label: "Direction", valueKey: "track", formatter: (val) => headingToCompassDirection(val) || "N/A" },
