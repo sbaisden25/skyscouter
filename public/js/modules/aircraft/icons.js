@@ -28,7 +28,7 @@ export const plottedAsPlaneIcon = ['C17', 'B737', 'C30J', 'DH8D', 'C27J', 'A321'
     'T206', 'DH8B', 'C680', 'B744', 'RV8', 'A345', 'IL76', 'ATLA', 'AT43', 'C441', 'BE55', 'BE30', 'S22T',
     'A748', 'A149', 'LJ60', 'CRJ7', 'SR22', 'B733', 'B788', 'B52', 'FA8X', 'AT44', 'DHC2', 'E314', 'T204',
     'B52', 'C510', 'C25A', 'E545', 'PZ4M', 'C55B', 'C525', 'B739', 'DC93', 'B736', 'CP23', 'F50', 'S15S',
-    'BE95', 'T210', 'AC90', 'P28R', 'Y20', 'MF17', 'BE58'];
+    'BE95', 'T210', 'AC90', 'P28R', 'Y20', 'MF17', 'BE58', 'AC95', 'LANC'];
 
 export const plottedAsHelicopterIcon = ['H64', 'H60', 'EC45', 'EC35', 'H53S', 'B407', 'B212', 'S92',
     'EH10', 'B412', 'A169', 'B505', 'A109', 'B429', 'A139', 'NH90', 'SURN', 'W3', 'AS50', 'AS65', 'B06', 
@@ -37,7 +37,7 @@ export const plottedAsHelicopterIcon = ['H64', 'H60', 'EC45', 'EC35', 'H53S', 'B
 
 export const plottedAsBomberIcon = ['B52', 'B1'];
 
-export const plottedAsUAVIcon = ['Q4', 'DRON', 'U2', 'BTB2', 'AKNC'];
+export const plottedAsUAVIcon = ['Q4', 'DRON', 'U2', 'BTB2', 'AKNC', 'Q9'];
 
 export const plottedAsFighterJetIcon = ['FA50', 'T38', 'HAWK', 'E314', 'EUFI', 'F16', 'M346', 'F100',
     'M339', 'HAR', 'MIR2', 'F15', 'F5', 'F22', 'VF35', 'F4', 'A10', 'MG29', 'F111', 'F14', 'SB39',
